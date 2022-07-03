@@ -241,9 +241,9 @@ $form->display();
 //print_r($_POST);
 $context_course = get_context_instance(CONTEXT_COURSE, $_POST['courselist']);
 //$context_mod = get_context_instance(CONTEXT_MODULE, $courseid);
-$user_records = get_enrolled_users($context_course, '', 0, '*');
 //print_r($user_records);
 if(isset($_POST['courselist']) && is_array($_POST['userlist'])){
+    $user_records = get_enrolled_users($context_course, '', 0, '*');
 
 //check if user is enrolled
 for($i=0;$i<count($_POST['userlist']);$i++)
